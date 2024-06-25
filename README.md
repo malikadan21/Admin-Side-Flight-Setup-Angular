@@ -1,4 +1,13 @@
-# FlightBookingApp
+# Admin Side Flight Setup Application using Angular
+
+This project is an Admin Side Flight Setup Application that enables administrators to manage flight, airport, and city data. The application is built with Angular, leveraging data binding and directives to create a dynamic and interactive web experience.
+
+Features
+Data Management: Administrators can add and manage flights, airports, and city data.
+User Authentication: A secure login system ensures that only authorized administrators can access and manage the data.
+Interactive UI: Utilizes Angular's data binding and directives to provide a responsive and user-friendly interface.
+Logout Functionality: Provides an option for administrators to securely log out of the application.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
 
