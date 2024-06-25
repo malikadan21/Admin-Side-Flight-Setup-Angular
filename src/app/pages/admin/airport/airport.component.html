@@ -1,0 +1,42 @@
+<div class="custom-table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Airport Code</th>
+          <th>Airport Name</th>
+          <th>Airport City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let airport of airportList; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>
+              {{airport.code}}
+          </td>
+          <td>
+            {{airport.name}}
+            </td>
+            <td>
+                {{airport.city}}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ airportList.length + 1 }}</td>
+            <td>
+                <input type="text" [(ngModel)]="newcode" placeholder="Enter Airport Code" />
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="newname" placeholder="Enter Airport Name" />
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="newcity" placeholder="Enter Airport City" />
+            </td>
+          </tr>
+      </tbody>
+    </table> 
+</div>
+    <div class="button-container">
+        <button class="custom-button" (click)="addAirport()">Add Airport</button>
+        </div>   
+  

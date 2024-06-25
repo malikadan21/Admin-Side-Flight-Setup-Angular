@@ -1,0 +1,27 @@
+<div *ngIf="isLoggedIn(); else loginNav">
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="/">Flait</a></div>
+      <ul class="ull">
+        <li><a href="/#/admin/airport">Airport</a></li>
+        <li><a href="/#/admin/city">City</a></li>
+        <li><a href="/#/admin/all-flights">All-Flights</a></li>
+        <button class="btn btn-outline-danger" (click)="logout()">Logout</button>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ng-template #loginNav>
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="/">Flait</a></div>
+      <ul class="ull">
+        <li><a href="/#/airport">Airport</a></li>
+        <li><a href="/#/city">City</a></li>
+        <li><a href="/#/all-flights">All-Flights</a></li>
+        <a class="btn btn-outline-primary" routerLink="/login">Login</a>
+      </ul>
+    </div>
+  </nav>
+</ng-template>

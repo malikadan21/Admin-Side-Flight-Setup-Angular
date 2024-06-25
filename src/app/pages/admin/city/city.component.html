@@ -1,0 +1,28 @@
+<div class="custom-table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>City Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cityList; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>
+              {{cityList[i]}}
+          </td>
+        </tr>
+        <tr>
+            <td>{{ cityList.length + 1 }}</td>
+            <td>
+                <input type="text" [(ngModel)]="newCity" placeholder="Enter City Name" />
+            </td>
+          </tr>
+      </tbody>
+    </table> 
+</div>
+    <div class="button-container">
+        <button class="custom-button" (click)="addCity()">Add City</button>
+        </div>   
+  

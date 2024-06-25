@@ -1,0 +1,64 @@
+<div class="custom-table-container">
+  <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Airline</th>
+          <th>Arrival Airport</th>
+          <th>Departure Airport</th>
+          <th>Travel Date</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let airport of flightsList; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>
+              {{airport.airline}}
+          </td>
+          <td>
+            {{airport.arrivalAirportCode}}
+            </td>
+            <td>
+                {{airport.departureAirportCode}}
+            </td>
+            <td>
+              {{airport.travelDate}}
+          </td>
+          <td>
+            {{airport.price}}
+        </td>
+        <td>
+          {{airport.action}}
+      </td>
+        </tr>
+        <tr>
+            <td>{{ flightsList.length + 1 }}</td>
+            <td>
+                <input type="text" [(ngModel)]="newairline" placeholder="Enter Airline" />
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="newarrivalairport" placeholder="Enter Arrival Airport" />
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="newdepartureairport" placeholder="Enter Departure Airport" />
+            </td>
+            <td>
+              <input type="text" [(ngModel)]="newtraveldate" placeholder="Enter Travel Date" />
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="newprice" placeholder="Enter Price" />
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="newaction" placeholder="Enter Action" />
+      </td>
+
+          </tr>
+      </tbody>
+    </table> 
+</div>
+    <div class="button-container">
+        <button class="custom-button" (click)="addAirport()">Add Flight</button>
+        </div>   
+  
